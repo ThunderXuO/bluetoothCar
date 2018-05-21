@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/about_us"/>
+    <RelativeLayout
+        android:id="@+id/about_content"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/developer_info"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_below="@id/about_titlebar"
+            android:dividerHeight="18dp"
+            android:fadeScrollbars="true"
+            android:fadingEdge="horizontal"
+            android:overScrollMode="always"
+            ></ListView>
+    </RelativeLayout>
+</LinearLayout>

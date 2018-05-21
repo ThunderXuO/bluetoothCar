@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.xumengli.bluetoothcar">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="蓝牙汽车"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <service
+            android:exported="true"
+            android:name="cn.xumengli.bluetoothcar.service.BluetoothService"
+            android:process=":remote">
+
+        </service>
+        <activity
+            android:name="cn.xumengli.bluetoothcar.StartActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/AppTheme"
+            android:name=".MainActivity"/>
+        <activity
+            android:theme="@style/AppTheme"
+            android:name=".AboutUs"/>
+        <activity
+            android:name=".BlueToothScan"
+            android:theme="@style/AppTheme"/>
+    </application>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+</manifest>

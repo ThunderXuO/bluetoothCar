@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:fadeScrollbars="true" android:overScrollMode="always" android:fadingEdge="horizontal">
+    <include layout="@layout/bluetoothscan"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="62dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/bonded_bluetooth_title"
+            android:text="已配对的设备"/>
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bonded_bluetooth"
+            android:layout_below="@id/bonded_bluetooth_title"
+            android:layout_marginTop="10dp">
+        </ListView>
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/bonded_bluetooth_empty"
+            android:textSize="18dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="可用设备"
+            android:id="@+id/avalible_devices"
+            android:layout_below="@id/bonded_bluetooth"
+            android:layout_marginLeft="10dp"/>
+
+            <ListView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/avalible_bluetooth"
+                android:background="#ffffff"
+                android:layout_below="@id/avalible_devices">
+            </ListView>
+
+            <Button
+                android:id="@+id/begin_search"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorAccent"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:text="搜索"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"/>
+
+</RelativeLayout>
